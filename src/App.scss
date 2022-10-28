@@ -45,6 +45,7 @@ body {
   position: absolute;
   right: 15px;
   top: 0px;
+  cursor: pointer;
 }
 .share-dot {
   width: 15px;
@@ -54,6 +55,13 @@ body {
   display: none;
   width: 15px;
 }
+.tool-tip {
+  position: absolute;
+  right: 35px;
+  display: none;
+  
+}
+
 /* links */
 
 .links {
@@ -133,6 +141,21 @@ footer * {
   }
   .share-dot {
     display: none;
+  }
+  .share-btn:hover {
+    .tool-tip {
+      display: block;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

@@ -5,7 +5,7 @@ import Profile from './components/Profile'
 import Links from './components/Links'
 import zuri from './assets/zuri-logo.svg'
 import i4g from './assets/i4glogo.svg'
-import './App.css'
+import './App.scss'
 
 function App() {
   
