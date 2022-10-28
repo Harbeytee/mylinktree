@@ -19,7 +19,7 @@ function App() {
       <div className="code">
         <img src={slack} alt="slack logo" className="slack-logo" />
         
-        <img src={github} alt="github logo" className="source-code" />
+        <a href="https://github.com/Harbeytee/mylinktree"><img src={github} alt="github logo" className="source-code" /></a>
       </div>
 
       <div className="line"></div>
