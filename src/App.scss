@@ -35,6 +35,9 @@ body {
   width: 88px;
   margin-top: 1.7rem;
 }
+#slack {
+  display: none;
+}
 .share-btn {
   border: 1px dashed #98A2B3;
   width: 40px;
@@ -74,20 +77,28 @@ body {
   
 
 }
-.links * {
-  background-color: #EAECF0;
-  padding-block: 1.2rem;
-  width: 100%;
-  text-align: center;
-  margin: 1.2rem 0rem auto;
-  text-transform: capitalize;
-  font-weight: 500;
-  font-size: 18px;
-  border-radius: 7px;
-  cursor: pointer;
-  
-}
 
+.links {
+  p {
+    margin-top: 0.7rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+  a {
+    background-color: #EAECF0;
+    padding-block: 1.2rem;
+    width: 100%;
+    text-align: center;
+    margin: 1.2rem 0rem auto;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    
+  }
+}
 a {
   color: #101828;
   text-decoration: none;
@@ -113,7 +124,7 @@ a {
 }
 footer {
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   width: 87%;
 }
 .footer-text {

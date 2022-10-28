@@ -14,7 +14,7 @@ export default function Profile() {
           <img src={shareIcon} alt="share button" className="share-icon" />
           <img src={toolTip} alt="tooltip" className="tool-tip" />
         </div>
-        {/*<span id="slack">@Abbytee</span>*/}
+        <span id="slack">@Abbytee</span>
     </div>
   )
 }
