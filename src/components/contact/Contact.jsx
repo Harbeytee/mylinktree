@@ -25,6 +25,7 @@ export default function Contact() {
 
             <div className='input-container'>
               <label htmlFor='firstName'>First name</label><br/>
+
               <input style={{border: errors.firstName ? '1px solid red': '1px solid #D0D5DD'}}
               type="text" 
               id="first_name" 
@@ -32,11 +33,13 @@ export default function Contact() {
               placeholder='Enter your first name'
               {...register("firstName", {required: true})}
                />
+
                {errors.firstName && <p className='error-msg'>Please enter a firstName</p>}
             </div>
 
             <div className='input-container'>
               <label htmlFor='lastName'>Last name</label><br />
+
               <input style={{border: errors.lastName ? '1px solid red': '1px solid #D0D5DD'}}
               type="text" 
               id="last_name" 
@@ -44,12 +47,14 @@ export default function Contact() {
               placeholder='Enter your last name' 
               {...register("lastName", {required: true})}
               />
+
               {errors.lastName && <p className='error-msg'>Please enter a lastName</p>}
             </div>
           </div>
 
           <div className="input-container">
             <label htmlFor="email">Email</label>
+
             <input style={{border: errors.email ? '1px solid red': '1px solid #D0D5DD'}}
             type="email" 
             id="email" 
@@ -59,6 +64,7 @@ export default function Contact() {
             {required: true, 
               pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ })}
             />
+            
             {errors.email && <p className='error-msg'>Please enter a valid email</p>}
           </div>
           

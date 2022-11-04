@@ -73,10 +73,10 @@ textarea:focus {
     input[type="checkbox"] {
        margin-right: 0.7rem;
       display: inline-block;
-      min-height: 16px;
-      min-width: 16px;
+      min-height: 19px;
+      min-width: 19px;
      
-        padding: 0.05rem 0.12rem 0rem;
+        padding: 0rem 0.2rem 0rem;
       background-color: transparent;
       appearance: none;
       -webkit-appearance: none;
@@ -87,13 +87,15 @@ textarea:focus {
         &:checked {
             border: 1px solid #1570EF;
             background-color: transparent;
-            
+            min-height: 10px;
         }
         &:checked::before {
-            content: url('./checkmark.svg');
+            content: '\2713';
             color: #1570EF;
+            
+
         }
-        //'\2713'
+        //\2713
     }
     input[type="checkbox"]:focus {
         border-color: #84caff;
