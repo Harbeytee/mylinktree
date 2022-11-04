@@ -7,28 +7,42 @@
     font-size: 36px;
     margin-top: 1.5rem;
   }
-  
+  header {
+    p {
+        color:  #475467;
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 0.8rem;
+     }
+  }
 
   header, main {
     width: 100%;
-    max-width: 720px;
+    max-width: 550px;
+   
     padding: 1rem 0.8rem 0rem;
     }
 
- p {
-    color:  #475467;
-    font-size: 18px;
-    line-height: 28px;
-    margin-top: 0.8rem;
- }
+ 
 
   
 }
-
+.input-container {
+    position: relative;
+    margin-top: 1rem;
+}
+.error-msg {
+    //position: absolute;
+    color:  #F83F23;
+    margin-top: 0.4rem;
+    margin-bottom: 0.5rem;
+    font-size: 13px;
+    font-weight: 500;
+}   
 
 
 form {
-    margin-top: 1.5rem;
+    margin-top: 0.2rem;
     margin-bottom: 6rem;
     input::placeholder, textarea::placeholder {
         color: #667085;
@@ -46,22 +60,39 @@ textarea:focus {
 
     input[type="text"], input[type="email"], textarea {
         width: 100%;
-        border: 1px solid #D0D5DD;
+        //border: 1px solid #D0D5DD;
         border-radius: 8px;
         height: 40px;
         text-indent: 0.6rem;
         margin-top: 0.45rem;
-        margin-bottom: 1rem;
+        //margin-bottom: 1rem;
         
     }
+    
     input[type="checkbox"] {
-       margin-right: 0.5rem;
+       margin-right: 0.7rem;
       display: inline-block;
       min-height: 16px;
       min-width: 16px;
      
-        border-radius: 20px;
-        border: 1px solid red;
+        padding: 0.05rem 0.12rem 0rem;
+      background-color: transparent;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+       -o-appearance: none;
+        border-radius: 5px;
+        border: 1px solid #D0D5DD;
+        &:checked {
+            border: 1px solid #1570EF;
+            background-color: transparent;
+           
+        }
+        &:checked::before {
+            content: url('./checkmark.svg');
+            color: #1570EF;
+        }
+        //'\2713'
     }
     input[type="checkbox"]:focus {
         border-color: #84caff;
@@ -69,7 +100,7 @@ textarea:focus {
         box-shadow: 0 0 0 0.22rem rgb(132, 202, 255, 0.3);
     }
     textarea {
-        height: 132px;
+        height: 110px;
         padding: 0.5rem;
         text-indent: 0rem;
     }
@@ -82,24 +113,41 @@ textarea:focus {
         border-radius: 8px;
         color: #fff;
         font-size: 1rem;
+        transition: 0.2s linear;
+    }
+    button:hover {
+        background-color: #175CD3;;
     }
     label {
         font-size: 14px;
         font-weight: 500;
        
+        
+       
     }
-    label:nth-of-type(3){
+    .agree{
+        color: #475467;
         font-size: 16px;
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
        display: flex;
-       align-items: baseline;
-       margin-top: 0.8rem;
+       align-items: flex-start;
+       margin-top: 1.5rem;
        font-weight: 400;
+       
     }
    
     
 }
 @media only screen and (min-width:860px) {
+    #contact-page {
+        header,main {
+            padding: 0rem;
+        }
+    }
+   
+    .error-msg {
+        margin-bottom: 0rem;
+    }
     .first-and-lastname {
         display: flex;
        
