@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 export default function Links() {
   return (
     <div className='links'>
@@ -19,6 +19,8 @@ export default function Links() {
 
 
         <a title='Click on the link to get the free Design Rules Book by Zuri that gives you the tips & guidelines you need to create truly professional designs, by addressing errors that could you get you disqualified.' id="book_design" href="https://books.zuri.team/design-rules">design books</a>
+        
+        <Link id="contact" to="/contact">Contact</Link>
         
     </div>
   )
