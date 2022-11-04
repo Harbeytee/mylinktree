@@ -92,6 +92,7 @@ textarea:focus {
         &:checked::before {
             content: '\2713';
             color: #1570EF;
+            font-weight: 700;
             
 
         }

@@ -34,7 +34,7 @@ export default function Contact() {
               {...register("firstName", {required: true})}
                />
 
-               {errors.firstName && <p className='error-msg'>Please enter a firstName</p>}
+               {errors.firstName && <p className='error-msg'>Please enter a first name</p>}
             </div>
 
             <div className='input-container'>
@@ -48,7 +48,7 @@ export default function Contact() {
               {...register("lastName", {required: true})}
               />
 
-              {errors.lastName && <p className='error-msg'>Please enter a lastName</p>}
+              {errors.lastName && <p className='error-msg'>Please enter a last name</p>}
             </div>
           </div>
 
@@ -64,7 +64,7 @@ export default function Contact() {
             {required: true, 
               pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ })}
             />
-            
+
             {errors.email && <p className='error-msg'>Please enter a valid email</p>}
           </div>
           
