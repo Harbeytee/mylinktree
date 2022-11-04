@@ -13,6 +13,7 @@
         font-size: 18px;
         line-height: 28px;
         margin-top: 0.8rem;
+        margin-bottom: 0.6rem;
      }
   }
 
@@ -62,7 +63,7 @@ textarea:focus {
         width: 100%;
         //border: 1px solid #D0D5DD;
         border-radius: 8px;
-        height: 40px;
+        height: 44px;
         text-indent: 0.6rem;
         margin-top: 0.45rem;
         //margin-bottom: 1rem;
@@ -86,7 +87,7 @@ textarea:focus {
         &:checked {
             border: 1px solid #1570EF;
             background-color: transparent;
-           
+            
         }
         &:checked::before {
             content: url('./checkmark.svg');
@@ -103,6 +104,7 @@ textarea:focus {
         height: 110px;
         padding: 0.5rem;
         text-indent: 0rem;
+        
     }
     button {
         width: 100%;
