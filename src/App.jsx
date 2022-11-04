@@ -1,36 +1,22 @@
-import { useState } from 'react'
-import slack from './assets/slack.svg'
-import github from './assets/github.svg'
-import Profile from './components/Profile'
-import Links from './components/Links'
-import zuri from './assets/zuri-logo.svg'
-import i4g from './assets/i4glogo.svg'
+//import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './components/Home'
+import Contact from './components/Contact'
 import './App.scss'
 
 function App() {
   
 
   return (
-    <div className="App">
-      <Profile />
-
-      <Links />
-
-      <div className="code">
-        <img src={slack} alt="slack logo" className="slack-logo" />
-        
-        <a href="https://github.com/Harbeytee/mylinktree"><img src={github} alt="github logo" className="source-code" /></a>
-      </div>
-
-      <div className="line"></div>
-
-      <footer>
-        <img src={zuri} alt="zuri logo" className="zuri-logo" />
-        <p className='footer-text'>HNG Internship 9 Frontend Task</p>
-        <img src={i4g} alt="i4g logo" className="i4g-logo" />
-      </footer>
-      
+    <div className='App'>
+      <Router>
+        <Routes>
+          <Route exact path ='/' element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
     </div>
+    
   )
 }
 
