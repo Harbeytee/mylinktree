@@ -4,12 +4,19 @@ import Footer from '../Footer'
 import './contact.scss'
 export default function Contact() {
   const { register, handleSubmit, formState: { errors } } = useForm()
+  //const [focus, setFocus] = useState(false)
   
-
   const onSubmit = (data) => {
     console.log(data)
   }
 
+ /*const changeFocus = () => {
+    setFocus(true)
+  }
+
+  const inputStyle = (input2) => {
+      return {border: input2 ? '1px solid red': '1px solid #D0D5DD', outline: focus ? input2? '0.1rem solid red': "0.1rem solid #84caff" : 0}
+  }*/
 
   
   
@@ -40,7 +47,7 @@ export default function Contact() {
             <div className='input-container'>
               <label htmlFor='lastName'>Last name</label><br />
 
-              <input style={{border: errors.lastName ? '1px solid red': '1px solid #D0D5DD'}}
+              <input style={{border: errors.lastName ? '1px solid red': '1px solid #D0D5DD'}} 
               type="text" 
               id="last_name" 
               name="lastName" 
@@ -70,13 +77,13 @@ export default function Contact() {
           
           <div className="input-container">
             <label htmlFor="message">Message</label>
-            <textarea style={{border: errors.firstName ? '1px solid red': '1px solid #D0D5DD'}}
+            <textarea style={{border: errors.message ? '1px solid red': '1px solid #D0D5DD'}}
             name="message" 
             id="message" 
             placeholder="Send me a message and i'll reply you as soon as possible..." 
             {...register("message", {required: true})}
             />
-            {errors.email && <p className='error-msg'>Please enter a message</p>}
+            {errors.message && <p className='error-msg'>Please enter a message</p>}
           </div>
 
           
